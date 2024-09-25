@@ -2,6 +2,8 @@
   "type": "module",
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
+    "@fontsource-variable/lexend": "^5.1.0",
+    "@fontsource/lexend": "^5.1.0",
     "antd": "^5.21.1",
     "mobx": "^6.13.2",
     "mobx-react-lite": "^4.0.7",

@@ -1,0 +1,35 @@
+.main-page{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+
+    &__block-panel{
+        padding: 24px 24px 0px 24px;
+        display: grid;
+        grid-template-rows: 32px 1fr;
+        grid-gap: 24px;
+        overflow: hidden;
+
+        .block-panel-header{
+            h1{
+                font-weight: 600;
+                margin: 0;
+                line-height: 1;
+            }
+        }
+
+        .block-panel-info{
+            display: flex;
+            gap: 12px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow-y: auto;
+        }
+    }
+
+    &__recent-panel{
+        padding: 12px;
+        background-color: azure;
+    }
+}

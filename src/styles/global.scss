@@ -1,18 +1,6 @@
-// ::-webkit-scrollbar {
-// 	width: 0.5rem;
-// 	display: none;
-// }
-// ::-webkit-scrollbar-track {
-// 	background: transparent;
-// }
+@import "@fontsource/lexend";
 
-// ::-webkit-scrollbar-thumb {
-// 	background: #888;
-// }
 
-// ::-webkit-scrollbar-thumb:hover {
-// 	background: #555;
-// }
 * {
 	box-sizing: border-box;
 }
@@ -32,6 +20,7 @@ body {
 	}
 
 	color: #fff;
+	font-family: "Lexend";
 
 	#root {
 		height: 100%;
