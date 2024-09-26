@@ -1,0 +1,13 @@
+.custom-banner{
+    padding: 12px;
+    height: 72px;
+    width: 312px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 24px 3fr 1fr;
+    grid-gap: 12px;
+}
+
+.banner-success {
+    background-color: #E1FCDE;
+}

@@ -1,8 +1,14 @@
 .main-page{
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1.2fr;
     overflow: hidden;
+
+    h1{
+        font-weight: 600;
+        margin: 0;
+        line-height: 1;
+    }
 
     &__block-panel{
         padding: 24px 24px 0px 24px;
@@ -12,11 +18,7 @@
         overflow: hidden;
 
         .block-panel-header{
-            h1{
-                font-weight: 600;
-                margin: 0;
-                line-height: 1;
-            }
+            
         }
 
         .block-panel-info{
@@ -25,11 +27,38 @@
             flex-direction: row;
             flex-wrap: wrap;
             overflow-y: auto;
+            padding-bottom: 12px;
         }
     }
 
     &__recent-panel{
-        padding: 12px;
-        background-color: azure;
+        padding: 24px 24px 12px 24px;
+        background-color: #363636;
+        border-radius: 16px 16px 0px 0px;
+        display: grid;
+        grid-template-rows: 32px 1fr;
+        grid-gap: 24px;
+        overflow: hidden;
+
+        .recent-panel-content{
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        @media only screen and (min-width: 460px){
+            .recent-panel-content{
+                overflow-y: auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: flex-start;
+            }
+
+            .recent-panel-content>* {
+                
+            }
+        }
     }
 }

@@ -2,7 +2,7 @@ import { FC, useEffect, useState, useRef } from "react";
 import { MainLayout } from "../../Layouts";
 
 import './index.scss'
-import { Elevator } from "../../components";
+import { CustomBanner, Elevator } from "../../components";
 
 export const MainPage:FC = () => {
     return(
@@ -13,11 +13,32 @@ export const MainPage:FC = () => {
                         <h1>Admin Panel</h1>
                     </div>
                     <div className="block-panel-info">
-                        <Elevator/>
-                        <Elevator/>
+                        <Elevator header="Users" content="16"/>
+                        <Elevator header="Roles" content="2"/>
                     </div>
                 </div>
-                <div className="main-page__recent-panel"></div>
+                <div className="main-page__recent-panel">
+                    <div className="recent-panel-header">
+                        <h1>Recent</h1>
+                    </div>
+                    <div className="recent-panel-content">
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        <CustomBanner type="success"/>
+                        
+                    </div>
+                </div>
             </div>
         </MainLayout>
     )
