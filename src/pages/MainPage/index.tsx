@@ -1,4 +1,5 @@
 import { FC, useEffect, useState, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { MainLayout } from "../../Layouts";
 
 import './index.scss'
@@ -6,6 +7,7 @@ import { CustomBanner, Elevator } from "../../components";
 
 
 export const MainPage:FC = () => {
+    const redirect = useNavigate();
     return(
         <MainLayout>
             <div className="main-page">
@@ -14,8 +16,8 @@ export const MainPage:FC = () => {
                         <h1>Admin Panel</h1>
                     </div>
                     <div className="block-panel-info">
-                        <Elevator header="Users" content="16"/>
-                        <Elevator header="Roles" content="2"/>
+                        <Elevator header="Users" content="16" onClick={() => redirect("/users")}/>
+                        <Elevator header="Roles" content="2" />
                         <Elevator header="Cucumbers" content="9"/>
                     </div>
                 </div>

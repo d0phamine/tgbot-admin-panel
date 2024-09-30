@@ -1,0 +1,12 @@
+.users-page {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}

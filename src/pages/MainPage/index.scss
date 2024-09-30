@@ -4,7 +4,7 @@
     grid-template-rows: 224px 1fr;
     gap: 24px;
     overflow: hidden;
-    grid-gap: 24px;
+    gap: 24px;
 
     h1{
         font-weight: 600;
@@ -13,7 +13,7 @@
     }
 
     &__block-panel{
-        padding: 24px 24px 0px 24px;
+        padding: 24px 0px 0px 24px;
         display: grid;
         grid-template-rows: 32px 144px;
         grid-gap: 24px;
@@ -27,6 +27,7 @@
             display: flex;
             overflow-x: auto;
             gap: 12px;
+            padding-right: 24px;
         }
 
         .block-panel-info > * {
