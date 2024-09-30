@@ -8,21 +8,30 @@ import {
 	WarningFilled,
 } from "@ant-design/icons";
 
-export const CustomBanner = (props: any) => {
+
+
+export const CustomBanner = (props:any) => {
 	return (
 		<div className={"custom-banner" + " " + "banner-" + props.type}>
 			<div className="custom-banner__icon">
 				{props.type == "success" ? (
 					<CheckCircleFilled style={{fontSize: "24px", color:"#17BF33"}} />
 				) : props.type == "info" ? (
-					<InfoCircleFilled />
+					<InfoCircleFilled style={{fontSize: "24px", color:"#5598F6"}}/>
 				) : props.type == "warning" ? (
-					<WarningFilled />
+					<WarningFilled style={{fontSize: "24px", color:"#F2930D"}}/>
 				) : (
-					<CloseCircleFilled />
+					<CloseCircleFilled style={{fontSize: "24px", color:"#F14A58"}}/>
 				)}
 			</div>
-			<div className="custom-banner__content"></div>
+			<div className="custom-banner__content">
+                <div className="content-title">
+                    <p>{props.title}</p>
+                </div>
+                <div className="content-description">
+                    <p>{props.description}</p>
+                </div>
+            </div>
 			<div className="custom-banner__action"></div>
 		</div>
 	);

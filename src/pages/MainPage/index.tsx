@@ -4,6 +4,7 @@ import { MainLayout } from "../../Layouts";
 import './index.scss'
 import { CustomBanner, Elevator } from "../../components";
 
+
 export const MainPage:FC = () => {
     return(
         <MainLayout>
@@ -15,6 +16,7 @@ export const MainPage:FC = () => {
                     <div className="block-panel-info">
                         <Elevator header="Users" content="16"/>
                         <Elevator header="Roles" content="2"/>
+                        <Elevator header="Cucumbers" content="9"/>
                     </div>
                 </div>
                 <div className="main-page__recent-panel">
@@ -22,21 +24,12 @@ export const MainPage:FC = () => {
                         <h1>Recent</h1>
                     </div>
                     <div className="recent-panel-content">
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        <CustomBanner type="success"/>
-                        
+                        <CustomBanner type="success" title="Succes logon" description="10.04.2024 18:00"/>
+                        <CustomBanner type="info" title="Message" description="10.04.2024 17:30"/>
+                        <CustomBanner type="warning" title="User bad credentials" description="13.04.2024 15:20"/>
+                        <CustomBanner type="error" title="Bot disconnected" description="12.04.2024 12:00"/>
+                        <CustomBanner type="error" title="Bot disconnected" description="12.04.2024 12:00"/>
+                        <CustomBanner type="error" title="Bot disconnected" description="12.04.2024 12:00"/>
                     </div>
                 </div>
             </div>

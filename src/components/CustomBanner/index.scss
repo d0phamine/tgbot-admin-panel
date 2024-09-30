@@ -1,13 +1,71 @@
 .custom-banner{
     padding: 12px;
     height: 72px;
-    width: 312px;
     border-radius: 16px;
     display: grid;
     grid-template-columns: 24px 3fr 1fr;
     grid-gap: 12px;
+
+    &__content {
+        display: grid;
+        grid-template-rows: 16px 1fr;
+        gap: 4px;
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1;
+            color: #1A212B;
+        }
+
+        .content-description {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    
+}
+
+@media only screen and (min-width: 460px){
+    .custom-banner{
+        width: 312px;
+    }
 }
 
 .banner-success {
     background-color: #E1FCDE;
+    .content-title {
+        p {
+            color: #016A1C;
+        }
+    }
+}
+
+.banner-info {
+    background-color: #E0EDFF;
+    .content-title {
+        p {
+            color: #105FCE;
+        }
+    }
+}
+
+.banner-warning{
+    background-color: #FFF2D2;
+    .content-title {
+        p {
+            color: #BA5900;
+        }
+    }
+}
+
+.banner-error{
+    background-color: #FFD4D8;
+    .content-title {
+        p {
+            color: #B1000F;
+        }
+    }
 }
