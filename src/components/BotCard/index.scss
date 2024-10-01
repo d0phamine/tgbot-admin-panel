@@ -33,17 +33,17 @@
 
 		.content-events {
 			display: flex;
-            gap: 6px;
+			gap: 6px;
 			flex-direction: row;
-            align-items: start;
-            justify-content: space-between;
+			align-items: start;
+			justify-content: space-between;
 
 			&__numbers {
 				p {
 					font-size: 32px;
 					line-height: 1;
 					font-weight: 400;
-					color: #fff2d2;
+					color: #E1FCDE;
 				}
 
 				p:nth-child(even) {
@@ -53,24 +53,68 @@
 				}
 			}
 
-            &__indicator {
-                height: 36px;
-                width: 36px;
-                background-color: #FFF2D2;
-                border-radius: 24px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
+			&__indicator {
+				height: 36px;
+				width: 36px;
+				background-color: #E1FCDE;
+				border-radius: 24px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 		}
 
-        .content-users {
-            p{
-                font-size: 12px;
-                color: #fff2d2;
-            }
-        }
+		.content-users {
+			p {
+				font-size: 12px;
+				color: #E1FCDE;
+			}
+		}
+	}
+}
+
+.bot-card-warning {
+    // box-shadow: 5px 5px 10px -5px rgba(255, 212, 216, 1);
+	.status-indicator {
+		background-color: #e1fcde;
+	}
+
+	.content-events {
+		&__numbers {
+			p {
+				color: #fff2d2;
+			}
+		}
+		&__indicator {
+			background-color: #fff2d2;
+		}
+	}
+	.content-users {
+		p {
+			color: #fff2d2;
+		}
+	}
+}
+
+.bot-card-error {
+	.status-indicator {
+		background-color: #f14a58;
+	}
+
+	.content-events {
+		&__numbers {
+			p {
+				color: #ffd4d8;
+			}
+		}
+		&__indicator {
+			background-color: #ffd4d8;
+		}
+	}
+	.content-users {
+		p {
+			color: #ffd4d8;
+		}
 	}
 }
 
