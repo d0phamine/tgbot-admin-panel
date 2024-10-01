@@ -1,0 +1,48 @@
+.bots-overview {
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	gap: 24px;
+
+	&__container {
+		display: flex;
+		width: 100%;
+		background-image: url(../../assets/images/Ellipse_3.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 80% 80%;
+		border-radius: 16px;
+
+		.container-block {
+			height: 100%;
+			width: 100%;
+			background-color: rgba(44, 44, 44, 0.2);
+			backdrop-filter: blur(32px);
+			border-radius: 16px;
+			border: 1px solid rgba(154, 168, 188, 0.2);
+			padding: 12px;
+
+			&__bot-cards {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 460px) {
+		&__container {
+			background-image: none;
+
+			.container-block {
+				&__bot-cards {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					align-content: flex-start;
+				}
+			}
+		}
+	}
+}
+

@@ -6,12 +6,12 @@ import './index.scss'
 import { CustomBanner, Elevator } from "../../components";
 
 
-export const MainPage:FC = () => {
+export const BotPanel:FC = () => {
     const redirect = useNavigate();
     return(
         <MainLayout>
-            <div className="main-page">
-                <div className="main-page__block-panel">
+            <div className="bot-panel">
+                <div className="bot-panel__block-panel">
                     <div className="block-panel-header">
                         <h1>Admin Panel</h1>
                     </div>
@@ -21,7 +21,7 @@ export const MainPage:FC = () => {
                         <Elevator header="Cucumbers" content="9"/>
                     </div>
                 </div>
-                <div className="main-page__recent-panel">
+                <div className="bot-panel__recent-panel">
                     <div className="recent-panel-header">
                         <h1>Recent</h1>
                     </div>

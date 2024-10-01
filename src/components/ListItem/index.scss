@@ -10,8 +10,13 @@
     gap: 12px;
 
     &__button {
-        width: 18px;
-        height: 18px;
+        padding: 2px 4px;
+        border-radius: 6px;
+    }
+
+    &__button:hover {
+        background-color: rgba(69, 68, 68, 0.4);
+        transition: 0.3s;
     }
 
     &__title {
