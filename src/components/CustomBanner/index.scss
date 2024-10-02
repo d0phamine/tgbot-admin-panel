@@ -1,71 +1,73 @@
-.custom-banner{
-    padding: 12px;
-    height: 72px;
-    border-radius: 16px;
-    display: grid;
-    grid-template-columns: 24px 3fr 1fr;
-    grid-gap: 12px;
+.custom-banner {
+	padding: 12px;
+	height: 72px;
+	border-radius: 16px;
+	display: grid;
+	grid-template-columns: 24px 1fr;
+	grid-gap: 12px;
+	background-color: rgba(44, 44, 44, 0.5);
+	border: 1px solid rgba(154, 168, 188, 0.2);
+	backdrop-filter: blur(32px);
 
-    &__content {
-        display: grid;
-        grid-template-rows: 16px 1fr;
-        gap: 6px;
+	&__content {
+		display: grid;
+		grid-template-rows: 16px 1fr;
+		gap: 6px;
 
-        p {
-            margin: 0;
-            font-size: 16px;
-            line-height: 1;
-            color: #1A212B;
-        }
+		p {
+			margin: 0;
+			font-size: 16px;
+			line-height: 1;
+			color: #fff;
+		}
 
-        .content-description {
-            p {
-                font-size: 14px;
-            }
-        }
-    }
-
-    
+		.content-description {
+			p {
+				font-size: 12px;
+				font-weight: 200;
+			}
+		}
+	}
 }
 
-@media only screen and (min-width: 460px){
-    .custom-banner{
-        width: 312px;
-    }
+@media only screen and (min-width: 460px) {
+	.custom-banner {
+		width: 312px;
+	}
 }
 
 .banner-success {
-    background-color: #E1FCDE;
-    .content-title {
-        p {
-            color: #016A1C;
-        }
-    }
+	// background-color: #1d1c1c;
+	.content-title {
+		p {
+			color: #17bf33;
+		}
+	}
 }
 
 .banner-info {
-    background-color: #E0EDFF;
-    .content-title {
-        p {
-            color: #105FCE;
-        }
-    }
+	// background-color: #1d1c1c;
+	.content-title {
+		p {
+			color: #5598f6;
+		}
+	}
 }
 
-.banner-warning{
-    background-color: #FFF2D2;
-    .content-title {
-        p {
-            color: #BA5900;
-        }
-    }
+.banner-warning {
+	// background-color: #1d1c1c;
+	.content-title {
+		p {
+			color: #f2930d;
+		}
+	}
 }
 
-.banner-error{
-    background-color: #FFD4D8;
-    .content-title {
-        p {
-            color: #B1000F;
-        }
-    }
+.banner-error {
+	// background-color: #1d1c1c;
+	.content-title {
+		p {
+			color: #f14a58;
+		}
+	}
 }

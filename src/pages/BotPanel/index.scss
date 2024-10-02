@@ -1,67 +1,69 @@
-.bot-panel{
-    height: 100%;
-    display: grid;
-    grid-template-rows: 224px 1fr;
-    overflow: hidden;
-    gap: 24px;
+.bot-panel {
+	height: 100%;
+	display: flex;
+    flex-direction: column;
+	padding: 24px 24px 0px 24px;
+	overflow: hidden;
+	gap: 12px;
 
-    h1{
-        font-weight: 600;
-        margin: 0;
-        line-height: 1;
-    }
+	h1 {
+		font-weight: 600;
+		margin: 0;
+		line-height: 1;
+	}
 
-    &__block-panel{
-        padding: 24px 0px 0px 24px;
-        display: grid;
-        grid-template-rows: 32px 144px;
-        grid-gap: 24px;
-        overflow: hidden;
+	&__block-panel {
+		display: flex;
+        flex-direction: column;
+		grid-gap: 24px;
+		overflow: hidden;
 
-        .block-panel-header{
-            
-        }
+		.block-panel-header {
+		}
 
-        .block-panel-info{
-            display: flex;
-            overflow-x: auto;
-            gap: 12px;
-            padding-right: 24px;
-        }
+		.block-panel-info {
+			border-radius: 16px;
+			display: flex;
+			overflow-x: auto;
+			gap: 12px;
+			padding: 12px;
+			background-color: rgba(44, 44, 44, 0.2);
+			border: 1px solid rgba(154, 168, 188, 0.2);
+			backdrop-filter: blur(32px);
+		}
+	}
 
-        .block-panel-info > * {
-            min-width: 144px; /* Устанавливаем минимальную ширину */
-        }
-    }
+	&__recent-panel {
+        height: 324px;
+		padding: 24px 24px 12px 24px;
+		background-color: rgba(44, 44, 44, 0.2);
+		border: 1px solid rgba(154, 168, 188, 0.2);
+		backdrop-filter: blur(32px);
+		border-radius: 16px 16px 16px 16px;
+		display: grid;
+		grid-template-rows: 32px 1fr;
+		grid-gap: 24px;
+		overflow: hidden;
 
-    &__recent-panel{
-        padding: 24px 24px 12px 24px;
-        background-color: #363636;
-        border-radius: 16px 16px 0px 0px;
-        display: grid;
-        grid-template-rows: 32px 1fr;
-        grid-gap: 24px;
-        overflow: hidden;
+		.recent-panel-content {
+			overflow-y: auto;
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+		}
 
-        .recent-panel-content{
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+		@media only screen and (min-width: 460px) {
+			.recent-panel-content {
+				overflow-y: auto;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-content: flex-start;
+			}
 
-        @media only screen and (min-width: 460px){
-            .recent-panel-content{
-                overflow-y: auto;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-content: flex-start;
-            }
-
-            .recent-panel-content>* {
-                
-            }
-        }
-    }
+			.recent-panel-content > * {
+			}
+		}
+	}
 }
+

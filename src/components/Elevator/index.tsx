@@ -1,15 +1,19 @@
-import { FC, useEffect, useState, useRef } from "react";
+import { FC } from "react";
 
 import './index.scss'
+import { CustomTag } from "../CustomTag";
 
-export const Elevator = (props:any) => {
+export const Elevator:FC = (props:any) => {
     return(
         <div className="elevator" onClick={props.onClick}>
-            <div className="elevator__header">
-                <p>{props.header}</p>
-            </div>
-            <div className="elevator__content">
+            <div className="elevator__summary">
                 <p>{props.content}</p>
+            </div>
+            <div className="elevator__title">
+                <p>{props.title}</p>
+            </div>
+            <div className="elevator__stats">
+                <CustomTag tagname="+13,4%/hr" color="#E1FCDE"/>
             </div>
         </div>
     )

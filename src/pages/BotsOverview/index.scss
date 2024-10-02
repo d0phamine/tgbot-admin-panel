@@ -4,6 +4,7 @@
 	flex-direction: column;
 	padding: 24px;
 	gap: 24px;
+	// background: linear-gradient(180deg, rgba(108,67,247,1) 45%, rgba(196,68,221,1) 100%);
 
 	&__header {
 		display: flex;
@@ -73,8 +74,9 @@
 			}
 
 			&__widgets > * {
-				background-color: rgba(44, 44, 44, 0.2);
+				background-color: rgba(44, 44, 44, 0.396);
 				border: 1px solid rgba(154, 168, 188, 0.2);
+				// backdrop-filter: blur(px);
 				border-radius: 16px;
 				height: 174px !important;
 				width: 174px;
@@ -82,10 +84,16 @@
 		}
 	}
 
-	@media only screen and (min-width: 460px) {
+	
+}
+
+@media only screen and (min-width: 460px) {
+	.bots-overview {
+		background-size: 120% 100%;
+
 		&__container {
 			background-image: none;
-
+	
 			.container-block {
 				&__bot-cards {
 					display: flex;
@@ -96,5 +104,6 @@
 			}
 		}
 	}
-}
 
+	
+}

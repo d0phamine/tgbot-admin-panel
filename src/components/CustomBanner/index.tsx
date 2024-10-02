@@ -32,7 +32,6 @@ export const CustomBanner = (props:any) => {
                     <p>{props.description}</p>
                 </div>
             </div>
-			<div className="custom-banner__action"></div>
 		</div>
 	);
 };
