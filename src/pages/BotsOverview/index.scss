@@ -1,31 +1,83 @@
 .bots-overview {
 	display: flex;
+	height: 100%;
 	flex-direction: column;
 	padding: 24px;
 	gap: 24px;
 
-	&__container {
+	&__header {
 		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
 		width: 100%;
-		background-image: url(../../assets/images/Ellipse_3.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 80% 80%;
+		// background-image: url(../../assets/images/Ellipse_3.png);
+		// background-repeat: no-repeat;
+		// background-position: center;
+		// background-size: 50% 50%;
 		border-radius: 16px;
+		overflow-y: auto;
+		overflow-x: hidden;
 
 		.container-block {
-			height: 100%;
 			width: 100%;
 			background-color: rgba(44, 44, 44, 0.2);
 			backdrop-filter: blur(32px);
 			border-radius: 16px;
 			border: 1px solid rgba(154, 168, 188, 0.2);
 			padding: 12px;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
 
 			&__bot-cards {
 				display: flex;
 				flex-direction: column;
 				gap: 12px;
+			}
+
+			&__bot-cards > * {
+				background-color: #1d1c1c;
+				padding: 6px 6px 12px 6px;
+				border-radius: 8px;
+			}
+		}
+
+		.container-stats {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 12px;
+
+			&__overview {
+				width: 100%;
+				background-color: #1d1c1c;
+				border-radius: 16px;
+				flex-shrink: 0;
+			}
+
+			&__widgets {
+				display: flex;
+				flex-direction: row;
+				gap: 12px;
+				overflow-x: auto;
+				overflow-y: hidden;
+			}
+
+			&__widgets > * {
+				background-color: rgba(44, 44, 44, 0.2);
+				border: 1px solid rgba(154, 168, 188, 0.2);
+				border-radius: 16px;
+				height: 174px !important;
+				width: 174px;
 			}
 		}
 	}

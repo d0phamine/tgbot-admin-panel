@@ -1,47 +1,57 @@
 import { FC } from "react";
+
 import { observer } from "mobx-react-lite";
+import { Link, useNavigate } from "react-router-dom";
 
 import { MainLayout } from "../../Layouts";
-import { BotCard } from "../../components";
+import {
+	BotCard,
+	CustomSelect,
+	DonutPlot,
+	OverviewPlot
+} from "../../components";
 import { useStores } from "../../store";
 
 import "./index.scss";
 
 export const BotsOverview: FC = observer(() => {
+	const redirect = useNavigate();
 	const data = [
 		{
 			name: "TG-bot-001",
 			eventsAmount: 300,
-			usersAmount: 36,
+			usersAmount: 36
 		},
 		{
 			name: "TG-bot-002",
 			eventsAmount: 500,
-			usersAmount: 56,
+			usersAmount: 56
 		},
 		{
 			name: "TG-bot-003",
 			eventsAmount: 136,
-			usersAmount: 43,
-		},
+			usersAmount: 43
+		}
 	];
 
 	return (
 		<MainLayout>
 			<div className="bots-overview">
-				<h1>Active Bots</h1>
-
+				<div className="bots-overview__header">
+					<h1>Active Bots</h1>
+					<CustomSelect style={{ width: "100px" }} />
+				</div>
 				<div className="bots-overview__container">
 					<div className="container-block">
 						<div className="container-block__bot-cards">
 							{data.map(
 								(
 									item: {
-										name: string,
-										eventsAmount: number,
-										usersAmount: number,
+										name: string;
+										eventsAmount: number;
+										usersAmount: number;
 									},
-									index,
+									index
 								) => (
 									<BotCard
 										key={index}
@@ -54,10 +64,20 @@ export const BotsOverview: FC = observer(() => {
 													: "normal"
 										}
 										data={item}
+										onClick={() => redirect("/bot")}
 									/>
-								),
+								)
 							)}
 						</div>
+					</div>
+					<div className="container-stats">
+						<div className="container-stats__overview">
+							<OverviewPlot />
+						</div>
+						<div className="container-stats__widgets">
+							<DonutPlot />
+						</div>
+						{/* <div className="container-stats__donut"></div> */}
 					</div>
 				</div>
 			</div>

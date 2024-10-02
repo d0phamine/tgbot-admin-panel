@@ -1,7 +1,9 @@
 .layout-wrapper {
     height: 100%;
+    overflow-y: hidden;
     .main-layout {
         height: 100%;
         background-color: #232323;
+        overflow-y: hidden;
     }
 }

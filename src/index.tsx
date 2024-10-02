@@ -17,7 +17,7 @@ root.render(
 				algorithm: theme.darkAlgorithm,
 				token: {
 					// Seed Token
-					colorPrimary: "#6f56d0",
+					colorPrimary: "#ECEFF4",
 				},
 			}}
 		>
