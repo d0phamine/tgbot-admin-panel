@@ -8,6 +8,7 @@ import {
 	BotCard,
 	CustomSelect,
 	DonutPlot,
+	Logo,
 	OverviewPlot
 } from "../../components";
 import { useStores } from "../../store";
@@ -38,6 +39,7 @@ export const BotsOverview: FC = observer(() => {
 		<MainLayout>
 			<div className="bots-overview">
 				<div className="bots-overview__header">
+					<Logo/>
 					<h1>Active Bots</h1>
 					<CustomSelect style={{ width: "100px" }} />
 				</div>

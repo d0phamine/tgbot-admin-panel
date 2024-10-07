@@ -3,14 +3,24 @@
 	height: 100%;
 	flex-direction: column;
 	padding: 24px;
-	gap: 24px;
+	gap: 12px;
 	// background: linear-gradient(180deg, rgba(108,67,247,1) 45%, rgba(196,68,221,1) 100%);
 
 	&__header {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-start;
+		gap: 12px;
+
+		.custom-select {
+			margin-left: auto;
+		}
+
+		h1 {
+			line-height: 1;
+			font-size: 24px;
+		}
 	}
 
 	&__container {
@@ -90,6 +100,12 @@
 @media only screen and (min-width: 460px) {
 	.bots-overview {
 		background-size: 120% 100%;
+
+		&__header {
+			h1 {
+				font-size: 32px;
+			}
+		}
 
 		&__container {
 			background-image: none;

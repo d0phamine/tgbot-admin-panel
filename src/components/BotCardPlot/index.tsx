@@ -13,7 +13,7 @@ export const BotCardPlot: FC<BotCardPlotProps> = (props) => {
 	].map((value, index) => ({ value, index }));
 	const config = {
 		data,
-		width: 170,
+		width: 160,
 		height: 36,
 		padding: 8,
 		shapeField: "smooth",
