@@ -3,9 +3,13 @@ import logotype from '../../assets/images/logo.png'
 
 import "./index.scss";
 
-export const Logo = () => {
+export interface LogoProps {
+    onClick?: () => void 
+}
+
+export const Logo:FC<LogoProps> = (props) => {
     return (
-        <div className="logo">
+        <div className="logo" onClick={props.onClick}>
             <img src={logotype} alt="" />
         </div>
     )

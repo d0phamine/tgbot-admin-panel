@@ -1,19 +1,34 @@
 import { FC, useEffect, useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import { SettingOutlined, ArrowUpOutlined } from "@ant-design/icons";
+import { Button, Segmented } from "antd";
+import {
+	SettingOutlined,
+	ArrowUpOutlined,
+	EllipsisOutlined
+} from "@ant-design/icons";
+
+import { MainLayout } from "../../Layouts";
+import {
+	CustomBanner,
+	Elevator,
+	CustomTag,
+	Logo,
+	ListItem,
+	CustomSearch
+} from "../../components";
 
 import "./index.scss";
-import { MainLayout } from "../../Layouts";
-import { CustomBanner, Elevator, CustomTag } from "../../components";
 
 export const BotPanel: FC = () => {
 	const redirect = useNavigate();
+	const [segmentValue, setSegmentValue] = useState<string>("Actions");
 	return (
 		<MainLayout>
 			<div className="bot-panel">
 				<div className="bot-panel__block-panel">
 					<div className="block-panel-header">
+						<Logo onClick={() => redirect("/")} />
 						<h1>TG-bot-001</h1>
 					</div>
 					<div className="block-panel-bot">
@@ -56,11 +71,7 @@ export const BotPanel: FC = () => {
 						</div> */}
 					</div>
 					<div className="block-panel-info">
-						<Elevator
-							title="Clients"
-							content="16"
-							onClick={() => redirect("/users")}
-						>
+						<Elevator title="Clients" content="16">
 							{/* <CustomTag tagname="+13,4%/hr" style={{backgroundColor:"#E1FCDE", color:"#016A1C"}} /> */}
 						</Elevator>
 						<Elevator title="Roles" content="2"></Elevator>
@@ -69,61 +80,224 @@ export const BotPanel: FC = () => {
 				</div>
 				<div className="bot-panel__recent-panel">
 					<div className="recent-panel-header">
-						<h2>Actions</h2>
+						{/* <h2>Actions</h2> */}
+						<Segmented<string>
+							options={["Actions", "Users"]}
+							value={segmentValue}
+							onChange={setSegmentValue}
+							style={{ background: "#161616" }}
+							size="large"
+						/>
+					</div>
+					<div className="recent-panel-search">
+						<CustomSearch size="large"/>
 					</div>
 					<div className="recent-panel-content">
-						<CustomBanner
-							type="success"
-							title="Succes logon"
-							description="10.04.2024 18:00"
-						/>
-						<CustomBanner
-							type="info"
-							title="Message"
-							description="10.04.2024 17:30"
-						/>
-						<CustomBanner
-							type="warning"
-							title="Bad credentials"
-							description="13.04.2024 15:20"
-						/>
-						<CustomBanner
-							type="error"
-							title="Bot disconnected"
-							description="12.04.2024 12:00"
-						/>
-						<CustomBanner
-							type="error"
-							title="Bot disconnected"
-							description="12.04.2024 12:00"
-						/>
-						<CustomBanner
-							type="error"
-							title="Bot disconnected"
-							description="12.04.2024 12:00"
-						/>
-						<CustomBanner
-							type="error"
-							title="Bot disconnected"
-							description="12.04.2024 12:00"
-						/>
-						<CustomBanner
-							type="error"
-							title="Bot disconnected"
-							description="12.04.2024 12:00"
-						/>
-						<CustomBanner
-							type="error"
-							title="Bot disconnected"
-							description="12.04.2024 12:00"
-						/>
-						<CustomBanner
-							type="error"
-							title="Bot disconnected"
-							description="12.04.2024 12:00"
-						/>
+						{segmentValue == "Actions" ? (
+							<>
+								<CustomBanner
+									type="success"
+									title="Succes logon"
+									description="10.04.2024 18:00"
+								/>
+								<CustomBanner
+									type="info"
+									title="Message"
+									description="10.04.2024 17:30"
+								/>
+								<CustomBanner
+									type="warning"
+									title="Bad credentials"
+									description="13.04.2024 15:20"
+								/>
+								<CustomBanner
+									type="error"
+									title="Bot disconnected"
+									description="12.04.2024 12:00"
+								/>
+								<CustomBanner
+									type="error"
+									title="Bot disconnected"
+									description="12.04.2024 12:00"
+								/>
+								<CustomBanner
+									type="error"
+									title="Bot disconnected"
+									description="12.04.2024 12:00"
+								/>
+								<CustomBanner
+									type="error"
+									title="Bot disconnected"
+									description="12.04.2024 12:00"
+								/>
+								<CustomBanner
+									type="error"
+									title="Bot disconnected"
+									description="12.04.2024 12:00"
+								/>
+								<CustomBanner
+									type="error"
+									title="Bot disconnected"
+									description="12.04.2024 12:00"
+								/>
+								<CustomBanner
+									type="error"
+									title="Bot disconnected"
+									description="12.04.2024 12:00"
+								/>
+							</>
+						) : (
+							<>
+								<ListItem
+									button={<EllipsisOutlined />}
+									title="User"
+									control={
+										<CustomTag
+											tagname="admin"
+											style={{
+												backgroundColor: "#B7F6D7"
+											}}
+										/>
+									}
+									style={{
+										backgroundColor: "rgba(44, 44, 44, 0.5)"
+									}}
+								/>
+								<ListItem
+									button={<EllipsisOutlined />}
+									title="User"
+									control={
+										<CustomTag
+											tagname="admin"
+											style={{
+												backgroundColor: "#B7F6D7"
+											}}
+										/>
+									}
+									style={{
+										backgroundColor: "rgba(44, 44, 44, 0.5)"
+									}}
+								/>
+								<ListItem
+									button={<EllipsisOutlined />}
+									title="User"
+									control={
+										<CustomTag
+											tagname="admin"
+											style={{
+												backgroundColor: "#B7F6D7"
+											}}
+										/>
+									}
+									style={{
+										backgroundColor: "rgba(44, 44, 44, 0.5)"
+									}}
+								/>
+								<ListItem
+									button={<EllipsisOutlined />}
+									title="User"
+									control={
+										<CustomTag
+											tagname="admin"
+											style={{
+												backgroundColor: "#B7F6D7"
+											}}
+										/>
+									}
+									style={{
+										backgroundColor: "rgba(44, 44, 44, 0.5)"
+									}}
+								/>
+								<ListItem
+									button={<EllipsisOutlined />}
+									title="User"
+									control={
+										<CustomTag
+											tagname="admin"
+											style={{
+												backgroundColor: "#B7F6D7"
+											}}
+										/>
+									}
+									style={{
+										backgroundColor: "rgba(44, 44, 44, 0.5)"
+									}}
+								/>
+								<ListItem
+									button={<EllipsisOutlined />}
+									title="User"
+									control={
+										<CustomTag
+											tagname="admin"
+											style={{
+												backgroundColor: "#B7F6D7"
+											}}
+										/>
+									}
+									style={{
+										backgroundColor: "rgba(44, 44, 44, 0.5)"
+									}}
+								/>
+								<ListItem
+									button={<EllipsisOutlined />}
+									title="User"
+									control={
+										<CustomTag
+											tagname="admin"
+											style={{
+												backgroundColor: "#B7F6D7"
+											}}
+										/>
+									}
+									style={{
+										backgroundColor: "rgba(44, 44, 44, 0.5)"
+									}}
+								/>
+								<ListItem
+									button={<EllipsisOutlined />}
+									title="User"
+									control={
+										<CustomTag
+											tagname="admin"
+											style={{
+												backgroundColor: "#B7F6D7"
+											}}
+										/>
+									}
+									style={{
+										backgroundColor: "rgba(44, 44, 44, 0.5)"
+									}}
+								/>
+								<ListItem
+									button={<EllipsisOutlined />}
+									title="User"
+									control={
+										<CustomTag
+											tagname="admin"
+											style={{
+												backgroundColor: "#B7F6D7"
+											}}
+										/>
+									}
+									style={{
+										backgroundColor: "rgba(44, 44, 44, 0.5)"
+									}}
+								/>
+							</>
+						)}
 					</div>
 				</div>
+				<Button
+					color="danger"
+					className="bot-panel__delete-button"
+					variant="outlined"
+					style={{
+						background: "#1d1c1c",
+						borderColor: "rgba(241, 74, 88, 0.3)"
+					}}
+				>
+					Delete bot
+				</Button>
 			</div>
 		</MainLayout>
 	);

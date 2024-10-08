@@ -7,11 +7,12 @@ export interface ListItemProps {
     title?:string | null,
     button?:ReactNode | null,
     control?:ReactNode | null,
+    style?:object,
 } 
 
 export const ListItem:FC<ListItemProps> = (props) => {
     return (
-        <div className="list-item">
+        <div className="list-item" style={props.style}>
             <div className="list-item__button">
                 {props.button}
             </div>

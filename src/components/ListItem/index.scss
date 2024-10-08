@@ -26,10 +26,10 @@
             font-weight: 400;
         }
     }
+}
 
-    &__control {
-
-        
-        
-    }
+@media only screen and (min-width: 460px) {
+	.list-item {
+		width: 312px;
+	}
 }
