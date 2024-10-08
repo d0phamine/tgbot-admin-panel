@@ -5,7 +5,8 @@ import { Button, Segmented } from "antd";
 import {
 	SettingOutlined,
 	ArrowUpOutlined,
-	EllipsisOutlined
+	EllipsisOutlined,
+	UserAddOutlined
 } from "@ant-design/icons";
 
 import { MainLayout } from "../../Layouts";
@@ -80,14 +81,14 @@ export const BotPanel: FC = () => {
 				</div>
 				<div className="bot-panel__recent-panel">
 					<div className="recent-panel-header">
-						{/* <h2>Actions</h2> */}
 						<Segmented<string>
-							options={["Actions", "Users"]}
+							options={["Actions", "Clients"]}
 							value={segmentValue}
 							onChange={setSegmentValue}
 							style={{ background: "#161616" }}
 							size="large"
 						/>
+						{segmentValue == "Clients" ? <Button type="text" style={{height:"36px"}} icon={<UserAddOutlined />}>Invite client</Button> : null}
 					</div>
 					<div className="recent-panel-search">
 						<CustomSearch size="large"/>
@@ -150,7 +151,7 @@ export const BotPanel: FC = () => {
 							<>
 								<ListItem
 									button={<EllipsisOutlined />}
-									title="User"
+									title="Username"
 									control={
 										<CustomTag
 											tagname="admin"
@@ -165,7 +166,7 @@ export const BotPanel: FC = () => {
 								/>
 								<ListItem
 									button={<EllipsisOutlined />}
-									title="User"
+									title="Username"
 									control={
 										<CustomTag
 											tagname="admin"
@@ -180,7 +181,7 @@ export const BotPanel: FC = () => {
 								/>
 								<ListItem
 									button={<EllipsisOutlined />}
-									title="User"
+									title="Username"
 									control={
 										<CustomTag
 											tagname="admin"
@@ -195,7 +196,7 @@ export const BotPanel: FC = () => {
 								/>
 								<ListItem
 									button={<EllipsisOutlined />}
-									title="User"
+									title="Username"
 									control={
 										<CustomTag
 											tagname="admin"
@@ -210,7 +211,7 @@ export const BotPanel: FC = () => {
 								/>
 								<ListItem
 									button={<EllipsisOutlined />}
-									title="User"
+									title="Username"
 									control={
 										<CustomTag
 											tagname="admin"
@@ -225,7 +226,7 @@ export const BotPanel: FC = () => {
 								/>
 								<ListItem
 									button={<EllipsisOutlined />}
-									title="User"
+									title="Username"
 									control={
 										<CustomTag
 											tagname="admin"
@@ -240,7 +241,7 @@ export const BotPanel: FC = () => {
 								/>
 								<ListItem
 									button={<EllipsisOutlined />}
-									title="User"
+									title="Username"
 									control={
 										<CustomTag
 											tagname="admin"
@@ -255,7 +256,7 @@ export const BotPanel: FC = () => {
 								/>
 								<ListItem
 									button={<EllipsisOutlined />}
-									title="User"
+									title="Username"
 									control={
 										<CustomTag
 											tagname="admin"
@@ -270,7 +271,7 @@ export const BotPanel: FC = () => {
 								/>
 								<ListItem
 									button={<EllipsisOutlined />}
-									title="User"
+									title="Username"
 									control={
 										<CustomTag
 											tagname="admin"
@@ -293,7 +294,9 @@ export const BotPanel: FC = () => {
 					variant="outlined"
 					style={{
 						background: "#1d1c1c",
-						borderColor: "rgba(241, 74, 88, 0.3)"
+						borderColor: "rgba(241, 74, 88, 0.3)",
+						borderRadius: "8px",
+						color:"#F14A58"
 					}}
 				>
 					Delete bot

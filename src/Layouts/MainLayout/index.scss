@@ -5,5 +5,86 @@
         height: 100%;
         background-color: #232323;
         overflow-y: hidden;
+
+        .adm-floating-panel {
+            .adm-floating-panel-header {
+                background-color: #161616;
+                // backdrop-filter: blur(32px);
+                border-top-left-radius: 16px;
+                border-top-right-radius: 16px;
+
+                .adm-floating-panel-bar {
+                    width: 50px;
+                }
+            }
+
+            .adm-floating-panel-content {
+                background-color: #161616;
+                // backdrop-filter: blur(32px);
+
+                .floating-panel-container{
+                    font-family: 'Lexend Variable', sans-serif;
+                    height: 100%;
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    overflow: hidden;
+
+                    &__balance {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+
+                        .balance-username {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 4px;
+
+                            p {
+                                font-size: 20px;
+                                font-weight: 400;
+                            }
+
+                            p:nth-child(1){
+                                color: rgba(225, 252, 222, 0.7);
+                            }
+                        }
+
+                        .balance-cache {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 12px;
+
+                            p{
+                                font-size: 48px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    &__history{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 12px;
+                        overflow: hidden;
+                        
+
+                        p {
+                            font-size: 16px;
+                        }
+
+                        .history-list{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+                            width: 100%;
+                            overflow-y: auto;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

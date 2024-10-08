@@ -19,7 +19,7 @@ body {
 		display: none;
 	}
 
-	color: #fff;
+	color: #fff !important;
 	font-family: 'Lexend Variable', sans-serif;
 
 	#root {
@@ -36,5 +36,6 @@ body {
 
 	p {
 		margin: 0;
+		line-height: 1;
 	}
 }

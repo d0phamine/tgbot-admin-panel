@@ -2,7 +2,7 @@
 	display: flex;
 	height: 100%;
 	flex-direction: column;
-	padding: 24px;
+	padding: 24px 24px 36px 24px;
 	gap: 12px;
 	// background: linear-gradient(180deg, rgba(108,67,247,1) 45%, rgba(196,68,221,1) 100%);
 
@@ -100,6 +100,7 @@
 @media only screen and (min-width: 460px) {
 	.bots-overview {
 		background-size: 120% 100%;
+		padding: 24px;
 
 		&__header {
 			h1 {
